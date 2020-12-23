@@ -1,0 +1,47 @@
+version: "3.8"
+services:
+    Master:
+        image: "centos-ssh"
+        container_name: master
+        hostname: ansible_master
+        #ports: 
+        #    - "22:22"
+        cap_add:
+            - SYS_ADMIN
+        security_opt:
+            - seccomp:unconfined
+        tmpfs:
+            - /run
+            - /run/lock
+        volumes:
+            - /sys/fs/cgroup:/sys/fs/cgroup:ro
+            - /Users/prathang/Prathang/Learnings/Shared:/data
+
+    Target-node-1:
+        image: "centos-ssh"
+        container_name: centos
+        hostname: target-1
+        cap_add:
+            - SYS_ADMIN
+        security_opt:
+            - seccomp:unconfined
+        tmpfs:
+            - /run
+            - /run/lock
+        volumes:
+            - /sys/fs/cgroup:/sys/fs/cgroup:ro
+
+    Target-node-2: 
+        image: "ubuntu"
+        container_name: ubuntu
+        hostname: target-2
+        cap_add:
+            - SYS_ADMIN
+        security_opt:
+            - seccomp:unconfined
+        tmpfs:
+            - /run
+            - /run/lock
+        volumes:
+            - /sys/fs/cgroup:/sys/fs/cgroup:ro
+        tty: true 

@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+    Terraform:
+        image: "centos-automation"
+        container_name: automation
+        hostname: automation
+        ports: 
+            - "22:22"
+            - "80:8080"
+        cap_add:
+            - SYS_ADMIN
+        security_opt:
+            - seccomp:unconfined
+        tmpfs:
+            - /run
+            - /run/lock
+        volumes:
+            - /sys/fs/cgroup:/sys/fs/cgroup:ro
+            - /Users/prathang/Prathang/Learnings/Shared:/data
+            - /Users/prathang/Prathang/Learnings/Jenkins:/var/lib/jenkins
