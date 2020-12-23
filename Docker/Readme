@@ -1,5 +1,21 @@
-# Once docker is installed, make login with below command from command line.
+# Step 1:
+Once docker is installed, make login with below command from command line.
 docker login
 
-# Then pull the latest image of docker, using below command.
+# Step 2:
+Pull the latest image of docker, using below command.
 docker pull centos
+
+# Step 3:
+Create shared folder in your laptop.
+Example : Create directory “shared” under [D drive]
+  
+# Step 4:
+Make git clone and download all these code to your local machine.
+
+# Step 5:
+Once share directory is created, please modify it in docker file.
+
+# Step 6:
+Navigate to the directory where file is downloaded and run below command.
+docker build -t centos-with-ssh .
