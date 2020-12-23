@@ -1,0 +1,5 @@
+# Once docker is installed, make login with below command from command line.
+docker login
+
+# Then pull the latest image of docker, using below command.
+docker pull centos
