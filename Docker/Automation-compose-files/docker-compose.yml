@@ -7,13 +7,6 @@ services:
         ports: 
             - "22:22"
             - "80:8080"
-        cap_add:
-            - SYS_ADMIN
-        security_opt:
-            - seccomp:unconfined
-        tmpfs:
-            - /run
-            - /run/lock
         volumes:
             - /sys/fs/cgroup:/sys/fs/cgroup:ro
             - <shared drive>:/data
