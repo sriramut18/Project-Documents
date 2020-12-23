@@ -16,5 +16,5 @@ services:
             - /run/lock
         volumes:
             - /sys/fs/cgroup:/sys/fs/cgroup:ro
-            - /Users/prathang/Prathang/Learnings/Shared:/data
-            - /Users/prathang/Prathang/Learnings/Jenkins:/var/lib/jenkins
+            - <shared drive>:/data
+            - <shared drive>:/var/lib/jenkins
