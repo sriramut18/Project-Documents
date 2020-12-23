@@ -20,7 +20,7 @@ Once share directory is created, please modify it in docker file.
 Trigger build files one by one
 Navigate to the directory where file is downloaded and run below command.
 docker build -t centos-ssh .
-docker build centos-automation .
+docker build -t centos-automation .
 
 # Step 7:
 Triggger compose file.
