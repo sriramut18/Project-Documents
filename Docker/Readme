@@ -11,11 +11,20 @@ Create shared folder in your laptop.
 Example : Create directory “shared” under [D drive]
   
 # Step 4:
-Make git clone and download all these code to your local machine.
+Make git clone and download all these code to your local machine in shared directory.
 
 # Step 5:
 Once share directory is created, please modify it in docker file.
 
 # Step 6:
 Navigate to the directory where file is downloaded and run below command.
-docker build -t centos-with-ssh .
+docker build -t centos-ssh .
+
+# Step 7:
+Navigate to the directory where file is downloaded and run below command.
+docker build centos-automation .
+
+# Step 8:
+Navigate to the directory where file is downloaded and run below command.
+docker-compose up -d
+
