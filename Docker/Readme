@@ -17,14 +17,13 @@ Make git clone and download all these code to your local machine in shared direc
 Once share directory is created, please modify it in docker file.
 
 # Step 6:
+Trigger build files one by one
 Navigate to the directory where file is downloaded and run below command.
 docker build -t centos-ssh .
-
-# Step 7:
-Navigate to the directory where file is downloaded and run below command.
 docker build centos-automation .
 
 # Step 8:
+Triggger compose file.
 Navigate to the directory where file is downloaded and run below command.
 docker-compose up -d
 
