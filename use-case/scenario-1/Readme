@@ -1,0 +1,15 @@
+# Objective :
+ Create standard jenkins job to deploy EC2 instance & provision HTML file on it using Terraform.
+# Prerequsites :
+  * 1 container with Jenkins & Terraform installed :
+  * Container should have shared volume
+  * SSH should be enabled.
+  * Local port 22 & 80 should be binded with container.
+  * Configure AWS-CLI to store credentials of AWS account.
+# Actions :
+Create Terraform configuration file to create simple EC2 instance.
+  * Makesure security group is attached
+  * Makesure Pem key is attached
+Use provisioner to install apache and copy HTML file.
+Create standard Jenkins job and do this from Jenkins portal.
+After successfull job execution - should be able to access the html file from url "hostname:80"
