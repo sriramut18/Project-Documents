@@ -1,29 +1,26 @@
-# Step 1:
+# Step 1: [Login]
 Once docker is installed, make login with below command from command line.
 docker login
 
-# Step 2:
+# Step 2: [Pull]
 Pull the latest image of docker, using below command.
 docker pull centos
 
-# Step 3:
+# Step 3: [Create folder]
 Create shared folder in your laptop.
 Example : Create directory “shared” under [D drive]
   
-# Step 4:
+# Step 4: [Clone]
 Make git clone and download all these code to your local machine in shared directory.
 
-# Step 5:
-Once share directory is created, please modify it in docker file.
+# Step 5: [Trigger build files]
+Navigate to folder "Build-images" and run script build.sh.
+Makesure build.sh has executable permission [chmod +x build.sh]
 
-# Step 6:
-Trigger build files one by one
-Navigate to the directory where file is downloaded and run below command.
-docker build -t centos-ssh .
-docker build -t centos-automation .
+# Step 6: [Compose file]
+Update compose file with shared directory created.
 
-# Step 7:
-Triggger compose file.
-Navigate to the directory where file is downloaded and run below command.
+# Step 7: [Triggger compose file]
+Navigate to folder "Automation-compose-files" and run below command.
 docker-compose up -d
 
